@@ -1,6 +1,3 @@
-﻿// terekhov4lab.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
 #include <iostream>
 #include <math.h>
 
@@ -39,28 +36,38 @@ int main()
     cout << "Задайте число b \n";
     cin >> b3;
     float sr = (a3 + b3) / 2;
-    cout << "Тогда их среднее арифметическое равно " << sr << endl << endl ;
+    cout << "Тогда их среднее арифметическое равно " << sr << endl << endl;
 
     //4
+    cout << "4. ";
     float a4;
-    cout << "4. Задайте число a \n";
-    cin >> a4;
+    do {
+        cout << "Задайте число a \n";
+        cin >> a4;
+    } while (a4 == 0);
     float b4;
-    cout << "Задайте число b \n";
-    cin >> b4;
-    float sum4 = a4 + b4;
-    float razn4 = a4 - b4;
-    float proiz4 = a4 * b4;
-    float chast4 = a4 / b4;
-    cout << "Сумма равна " << sum4 << endl << "Разность равна " << razn4 << endl << "Произведение равно " << proiz4 << endl << "Частное равно " << chast4 << endl << endl;
+    do {
+        cout << "Задайте число b \n";
+        cin >> b4;
+    } while (b4 == 0);
+    float sum4 = pow(a4, 2) + pow(b4, 2);
+    float razn4 = pow(a4, 2) - pow(b4, 2);
+    float proiz4 = pow(a4, 2) * pow(b4, 2);
+    float chast4 = pow(a4, 2) / pow(b4, 2);
+    cout << "Сумма квадратов равна " << sum4 << endl << "Разность квадратов равна " << razn4 << endl << "Произведение квадратов равно " << proiz4 << endl << "Частное квадратов равно " << chast4 << endl << endl;
 
     //5
+    cout << "5. ";
     float a5;
-    cout << "5. Задайте число a \n";
-    cin >> a5;
+    do {
+        cout << "Задайте число a \n";
+        cin >> a5;
+    } while (a5 == 0);
     float b5;
-    cout << "Задайте число b \n";
-    cin >> b5;
+    do {
+        cout << "Задайте число b \n";
+        cin >> b5;
+    } while (b5 == 0);
     float sum5 = abs(a5) + abs(b5);
     float razn5 = abs(a5) - abs(b5);
     float proiz5 = abs(a5) * abs(b5);
