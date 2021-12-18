@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -68,12 +68,14 @@ int main()
     }
 
     //4
-    int A, B, C;
+    int A, B, C, a, b;
     cout << "4. Задайте A, B и C\n";
     cin >> A;
     cin >> B;
     cin >> C;
-    cout << "Количество размещенных квадратов равно " << (A*B)/(C*C) << ",\na площадь незанятой части прямоугольника равна " << (A * B) % (C * C) << endl << endl;
+    a = (A / C) * C;
+    b = (B / C) * C;
+    cout << "Количество размещенных квадратов равно " << (a * b) / (C * C) << ",\na площадь незанятой части прямоугольника равна " << A * B - a * b << endl << endl;
 
     //5
     int y, otv5;
