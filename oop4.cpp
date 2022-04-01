@@ -66,7 +66,7 @@ double power(double n, int p) {
 };
 
 int power(int n, int p) {
-    double res = n;
+    int res = n;
     if (p == 0) {
         return 1;
     }
@@ -79,7 +79,7 @@ int power(int n, int p) {
 };
 
 long power(long n, int p) {
-    double res = n;
+    long res = n;
     if (p == 0) {
         return 1;
     }
@@ -92,7 +92,7 @@ long power(long n, int p) {
 };
 
 float power(float n, int p) {
-    double res = n;
+    float res = n;
     if (p == 0) {
         return 1;
     }
@@ -135,9 +135,38 @@ void task7() {
     cout << "Результат возведения: " << power(n4, p) << endl;
 };
 
-int swap(int a, int b) {
-    
-}
+int swap(int& a, int& b) {
+    int buf = a;
+    a = b;
+    b = buf;
+    return a, b;
+};
+
+void task8() {
+    int a, b;
+    cout << "Последовательно введите переменные a и b, чтобы поменять их местами\n";
+    cin >> a;
+    cin >> b;
+    swap(a, b);
+    cout << "Переменная a равна " << a << ", а переменная b — " << b << endl;
+};
+
+time1 swap_for_time(time1& a, time1& b) {
+    time1 buf;
+    a = b;
+    b = buf;
+    return a, b;
+};
+
+void task9() {
+    time1 swap;
+    cout << "Задайте любые значения для первой структуры. Последовательно время в "
+    cin >> 
+};
+
+void task10() {
+
+};
 
 
 int main() {
@@ -161,8 +190,15 @@ int main() {
         case 7:
             task7();
             break;
+        case 8:
+            task8();
+            break;
+        case 9:
+            task9();
+            break;
+        case 10:
+            task10();
+            break;
         }
     }
-}
-
-
+};
